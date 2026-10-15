@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAJOSE RETAILERS - Job Applications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f2f5f9;
+            color: #222;
+        }
+        header {
+            background: #064e3b;
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            max-width: 700px;
+            margin: 25px auto;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #0001;
+        }
+        h2 {
+            color: #064e3b;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #047857;
+            color: white;
+            border: none;
+            padding: 13px;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .notice {
+            background: #ecfdf5;
+            padding: 12px;
+            border-left: 4px solid #047857;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>WAJOSE RETAILERS</h1>
+    <p>Job Opportunities & Applications</p>
+</header>
+
+<main>
+    <section class="card">
+        <h2>Welcome to WAJOSE RETAILERS</h2>
+        <p>Explore job opportunities and submit your application online.</p>
+        <p class="notice">
+            Application fee: KSh 100. Payment is intended for Till Number
+            <strong>3249039</strong>.
+        </p>
+        <p>Please verify the payment instructions with the business before paying.
+        This demonstration does not process or confirm payments.</p>
+    </section>
+
+    <section class="card">
+        <h2>Available Job Application</h2>
+        <p><strong>Position:</strong> Retail Assistant</p>
+        <p><strong>Employer:</strong> WAJOSE RETAILERS</p>
+        <p>Applicants should be ready to assist customers and support daily shop operations.</p>
+    </section>
+
+    <section class="card">
+        <h2>Apply for a Job</h2>
+        <form id="applicationForm">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+
+            <label for="email">Email Address (optional)</label>
+            <input type="email" id="email">
+
+            <label for="position">Position Applied For</label>
+            <select id="position" required>
+                <option value="">Choose a position</option>
+                <option>Retail Assistant</option>
+                <option>Cashier</option>
+                <option>Storekeeper</option>
+            </select>
+
+            <label for="education">Highest Education Level</label>
+            <select id="education" required>
+                <option value="">Choose education level</option>
+                <option>Primary</option>
+                <option>Secondary</option>
+                <option>Certificate</option>
+                <option>Diploma</option>
+                <option>Degree</option>
+            </select>
+
+            <label for="message">Briefly tell us about yourself</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+        <p id="result" role="status"></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 WAJOSE RETAILERS</p>
+</footer>
+
+<script>
+    document.getElementById("applicationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        document.getElementById("result").textContent =
+            "Your form has been filled in, but this demo cannot send or save applications yet.";
+    });
+</script>
+
+</body>
+</html>
